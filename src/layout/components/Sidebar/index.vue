@@ -30,8 +30,10 @@ export default {
     ...mapGetters([
       'sidebar'
     ]),
+    // 这里应该替换为仓库中已经计算好的需要展示的全部路由
     routes() {
-      return this.$router.options.routes
+      // Sidebar:需要便利的应该是仓库vuex计算完毕的路由
+      return this.$store.state.user.resultAllRoutes
     },
     activeMenu() {
       const route = this.$route

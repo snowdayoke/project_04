@@ -61,11 +61,11 @@ export default {
   data() {
     // 先不用在意，这里面进行表单验证，验证用户名与密码操作
     const validateUsername = (rule, value, callback) => {
-      if (!validUsername(value)) {
-        callback(new Error('Please enter the correct user name'))
-      } else {
+      // if (!validUsername(value)) {
+      //   callback(new Error('Please enter the correct user name'))
+      // } else {
         callback()
-      }
+      // }
     }
     const validatePassword = (rule, value, callback) => {
       if (value.length < 6) {
